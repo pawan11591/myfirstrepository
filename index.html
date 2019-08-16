@@ -1,0 +1,50 @@
+<html>
+	
+	<head>
+		
+		<script 
+				id = "sap-ui-bootstrap" 
+				src = "https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+		        data-sap-ui-libs = "sap.m, sap.ui.core" 
+		        data-sap-ui-theme = "sap_bluecrystal">
+		</script>     
+		
+		<script>
+		   var oButton = new sap.m.Button("idButton",
+		   {
+		   	text: 'Click me',
+		   	press: function()
+		   	{
+		   		//messageToast.show("Hello World!");
+		   		alert("Click Ok");
+		   		window.open("https://www.google.co.in/");
+		   	}
+		   });
+		   oButton.placeAt("content");
+		   
+		   var oLabel = new sap.m.Label({
+		   	 width: "100px",
+		   	 text: 'Name: '});
+		   oLabel.placeAt("content2");
+		   
+		   var oIn = new sap.m.Input("idText",
+		   {  
+		   	  width: "400px",
+		   	  value: 'This is for Input',
+		   	  description: 'END',
+		   });
+		   oIn.placeAt("content2");
+		   
+		</script>
+		
+		<title> SAP UI5 Title </title>
+	</head>
+	
+	<body class="sapuiBody">
+		<h1>Welcome to SAP UI5 demo</h1>
+	    <div>Hello World</div>
+	    <div id = "content"></div>
+	    <div id = "content2"></div>
+	</body>
+	
+</html>
